@@ -3,9 +3,9 @@ package s031;
 public class Primitive {
     public static void main(String[] args) {
         boolean flag = false;
-        System.out.println(flag);
+         System.out.println(flag);
 
-        char c = 'A';
+         char c = 'A';
         System.out.println(c);
 
         byte y = 42;
@@ -20,7 +20,7 @@ public class Primitive {
         long z = 1_000_000_000_000_000L;
         System.out.println(z);
 
-        float f = 3.12e20F;
+         float f = 3.12e20F;
         System.out.println(f);
 
         double d = 3.12e200;
