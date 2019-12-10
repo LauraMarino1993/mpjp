@@ -2,7 +2,7 @@ package s040;
 
 public class Widening {
     public static void main(String[] args) {
-        byte b = 42;
+        byte b = 52;
         short s = b;
         int i = s;
         long l = i;

@@ -2,7 +2,7 @@ package s043;
 
 public class SwitchInt {
     public static void main(String[] args) {
-        int value = 42;
+        int value = 1;
 
         // ...
 
