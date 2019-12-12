@@ -30,7 +30,7 @@ public class ParameterPassing {
         Objects.requireNonNull(parameter, "Parameter should not be null");
 
         System.out.println("parameter id was " + System.identityHashCode(parameter));
-        parameter += " there";
+        parameter += " there";//ho fatto una concatenazione di stringhe: si crea una nuova stringa "hi there". ora cambia il reference della stringa. 
         System.out.println("Now parameter id is " + System.identityHashCode(parameter));
         System.out.println("parameter value is " + parameter);
     }
@@ -44,7 +44,7 @@ public class ParameterPassing {
         // alternatively: if parameter is null throws a NullPointerException
         Objects.requireNonNull(parameter, "Parameter should not be null");
 
-        parameter.append(" there");
+        parameter.append(" there");//append è come +=
         System.out.println("parameter value is " + parameter);
     }
 
@@ -87,7 +87,7 @@ public class ParameterPassing {
         reference(referenceValue);
         System.out.println("referenceValue now is " + referenceValue);
 
-        int array[] = { 42 };
+        int[] array = { 42 };
 
         System.out.println("array[0] is " + array[0]);
         reference(array);
