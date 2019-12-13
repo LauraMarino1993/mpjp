@@ -15,4 +15,5 @@ class SimpleTest {
 
         assertThat(result, equalTo(-42));
     }
+    
 }
