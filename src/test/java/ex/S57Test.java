@@ -12,8 +12,16 @@ class S57Test {
     void speedPlain() {
         double actual = S57.speed(100, 9.58);
 
-        assertEquals(actual, 10.438, 0.001);
+        assertEquals(actual, 10.438, 0.001); //0.001=approssimazione
     }
+    
+    @Test
+    void speedPlain2() {
+        double actual = S57.speed(100, 2);
+
+        assertEquals(actual, 50.0);
+    }
+
 
     @Test
     void speedInfinity() {
