@@ -12,7 +12,7 @@ public class AboutStringBuilder {
         
         System.out.println("appending: " + sb3.append(' ').append("world")); // è come la concatenazione ma lavora sulla string builder corrente invece di crearne uno nuovo.
         
-        System.out.println("char at position 1 in sb3 is '" + sb3.charAt(1) + "'");
+        System.out.println("char at position 1 in sb3 is '" + sb3.charAt(1) + "'"); // permette di estrarre da una stringa il carattere che sta in una certa posizione.
         
         System.out.println("deleting: " + sb3.delete(5, 10).deleteCharAt(2)); // elimina tutti i caratteri tra 5 e 10 (10 escluso) e poi elimina il carattere nella posizione 2
         

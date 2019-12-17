@@ -128,10 +128,31 @@ public class S58 {
 	 * @param c
 	 * @return a sorted array
 	 */
+
+	public static int[] sort2(int a, int b) {
+		int[] result = new int[2];
+		if (a < b) {
+			result[0] = a;
+			result[1] = b;
+
+		} else {
+			result[0] = b;
+			result[1] = a;
+		}
+
+		return result;
+	}
+
 	public static int[] sort(int a, int b, int c) {
 		int[] result = new int[3];
 	    
-
+         if (a<b) {
+        	 if (c<a) {
+        	 }else if (c>b) {
+        //	 } else { a, c, b;
+        	 }
+        	 
+         }
 		// TODO
 
 		return result;
