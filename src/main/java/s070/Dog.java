@@ -9,7 +9,7 @@ public class Dog implements BarkAndWag {
     public String bark(int count) {
         StringBuilder sb = new StringBuilder();
 
-        for (int i = 0; i < count; i++) {
+        for (int i = 0; i < count; i++) {// se l'utente mi dà un numero, faccio abbaiare tot volte
             sb.append(bark());
         }
 
