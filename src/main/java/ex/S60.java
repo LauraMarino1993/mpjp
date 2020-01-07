@@ -42,15 +42,16 @@ public class S60 {
 	 * @return a string, same of input but without vowels
 	 */
 	public static String removeVowels(String s) {
-		StringBuilder sb = new StringBuilder(); //creo una copia, stringbuilder
-		for (int i = 0; i < s.length(); i++) { //percorro tutta la lunghezza della stringa carattere per carattere
-			char c = s.charAt(i); //definisco l'indice charAt(i)
-			if (c != 'a' && c != 'e' && c != 'i' && c != 'o' && c != 'u') { //se il carattere che guardo non ha a,e,i,o,u
-				sb.append(c); //aggiungo c alla stringa
+		StringBuilder sb = new StringBuilder(); // creo una copia, stringbuilder
+		for (int i = 0; i < s.length(); i++) { // percorro tutta la lunghezza della stringa carattere per carattere
+			char c = s.charAt(i); // definisco l'indice charAt(i)
+			if (c != 'a' && c != 'e' && c != 'i' && c != 'o' && c != 'u') { // se il carattere che guardo non ha
+																			// a,e,i,o,u
+				sb.append(c); // aggiungo c alla stringa
 			}
 
 		}
-		return sb.toString();//converto lo stringbuilder in una stringa 
+		return sb.toString();// converto lo stringbuilder in una stringa
 	}
 
 	/**
@@ -71,23 +72,47 @@ public class S60 {
 	 * @return a new array holding the same elements of input, in reversed order
 	 */
 	public static int[] reverse(int[] data) {
-		int[] result = new int[0];
-
-		// TODO
+		int[] result = new int[data.length];
+		int j=0; //creo un nuovo indice per il secondo array
+		for (int i=data.length-1; i>=0; i--) { //parto dall'ultima posizione di data (data.length-1), fino ad arrivare alla posizione 0
+			result [j] = data[i];
+			j++; //copro tutto l'array
+		}
 
 		return result;
+		
+		/* altra possibilità: l'operatore virgola. inizializzo più di una variabile di loop all'interno del mio for. 
+		 * posso farlo solo se le variabili sono dello stesso tipo:
+		 * for (int i=data.length-1, j=0; i>=0; i--,j++){
+		 * result[i]= data[data.length-1-i];
+		 */
 	}
 
 	/**
 	 * Calculate the average
 	 * 
 	 * @param data
-	 * @return the average
+	 * @return the average CALCOLARE LA MEDIA: attenzione però perchè bisogna tener
+	 *         conto che la media possa essere decimale quindi il return type dovrà
+	 *         essere un double
 	 */
 	public static double average(int[] data) {
-		// TODO
-		return 0;
+		double sum = 0; // creo direttamente una variabile double in modo da poter fare la divisione e
+						// quindi la media ovviando al problema di un risultato decimale
+		for (int i = 0; i < data.length; i++) {
+			sum += data[i];
+		}
+
+		return sum / data.length;
 	}
+
+	/*
+	 * con il for each: 
+	 * for (int cur:data){ 
+	 *     sum+=value; 
+	 * } 
+	 * return sum/data.length;
+	 */
 
 	/**
 	 * Find the largest value
@@ -96,7 +121,23 @@ public class S60 {
 	 * @return the largest value
 	 */
 	public static int max(int[] data) {
-		// TODO
-		return 0;
-	}
+		
+		int massimo = Integer.MIN_VALUE; /*per trovare il numero minimo, visto che ci sono anche i negativi, 
+		stabilisco che la variabile massimo sia un integer applicando il metodo min.value */
+		
+		for (int i=0; i<data.length; i++) {
+			if (data[i]> massimo) {
+				massimo = data[i];
+			}
+		}
+			return massimo;
+		}
+	   /* con il for each:
+	    * for (int cur:data){
+	    * if (massimo < cur){
+	    * massimo=cur;
+	    * }
+	    * }
+	    */
 }
+
