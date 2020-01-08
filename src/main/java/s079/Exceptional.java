@@ -28,6 +28,6 @@ public class Exceptional {
 
     public static void main(String[] args) {
         Exceptional exceptional = new Exceptional();
-        exceptional.f();
+        exceptional.f(); //visto che il metodo f non è statico, devo per forza creare l'oggetto exceptional
     }
 }
