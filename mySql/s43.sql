@@ -32,7 +32,7 @@ select max(tmp.avg_sal) from (
 select department_id, round(avg(salary))
 from employees
 group by department_id having avg(salary) < (select max(x.sal) from (
-	select avg(salary) sal
+	select department_id, avg(salary) sal
 	from employees
 	group by department_id) x)
 order by 2 desc;
