@@ -16,6 +16,6 @@ end;
 // delimiter ;
 
 update coders
-set salary = salary + 3;
+set salary = salary + 7;
 
 select * from coders;

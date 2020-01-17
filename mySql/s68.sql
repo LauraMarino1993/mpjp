@@ -18,8 +18,8 @@ begin
 	declare continue handler for not found
 		set v_done = true;
 
-	open cur_coders;
-	while not v_done do
+	open cur_coders; -- quando apriamo il cursore viene popolato
+	while not v_done do -- finché non trovo niente, cioè v_done è true
 		fetch cur_coders into v_first_name, v_last_name;
 		set v_mailing_list = concat(v_mailing_list,
 			lower(v_first_name), "." , lower(v_last_name), "@x.dd;");
